@@ -11,7 +11,7 @@ from googletrans import Translator
 from humanfriendly import format_timespan, format_size, format_number, format_length
 import time, random, sys, json, codecs, threading, glob, re, string, os, requests, six, ast, pytz, urllib, urllib3, urllib.parse, traceback, atexit, subprocess
 
-ririn = LINE("EtKtkL176FshhP9PKaV6.7kqscP17dKQEF08Bg5AKnG.XNdQINxpbD1oN9msScvYFDrCkFFwTtDiaAH4+0uKmNg=")
+ririn = LINE("EvD4KA6CuL4aZDmxwjA2.itKPohL4nn0IgO3EAGvRuG.MaA0xkyRTuv+ZWsAYZgkPEYQu/YGVA9W3d8B+qFU0FI=")
 #ririn = LINE("")
 ririnMid = ririn.profile.mid
 ririnProfile = ririn.getProfile()
@@ -48,9 +48,9 @@ wait = {
         "status": False,
         "target": {}
     },
-    "Protectcancel": True,
-    "Protectgr": True,
-    "Protectinvite": True,
+    "Protectcancel": False,
+    "Protectgr": False,
+    "Protectinvite": False,
     "Protectjoin": False,
     "setKey": False,
     "sider": False,
@@ -331,7 +331,7 @@ def helpmessage():
     else:
         key = ''
     helpMessage =   "╔════════════════════╗" + "\n" + \
-                    "                    ✰ ᴅɴᴀ ʙᴏᴛ ✰" + "\n" + \
+                    "                    ✰ Sepri Bot ✰" + "\n" + \
                     "╚════════════════════╝" + "\n" + \
                     "╔════════════════════╗" + "\n" + \
                     "                ◄]·✪·Public·✪·[►" + "\n" + \
@@ -643,7 +643,7 @@ def ririnBot(op):
         if op.type == 15:
         	dan = ririn.getContact(op.param2)
         	tgb = ririn.getGroup(op.param1)
-        	ririn.sendMessage(op.param1, "ɴᴀʜ ᴋᴀɴ ʙᴀᴘᴇʀ 「{}」, ɢᴀᴋ ᴜsᴀʜ ʙᴀʟɪᴋ ᴅɪ {} ʟᴀɢɪ ʏᴀ\nsᴇʟᴀᴍᴀᴛ ᴊᴀʟᴀɴ ᴅᴀɴ sᴇᴍᴏɢᴀʜ ᴛᴇɴᴀɴɢ ᴅɪʟᴜᴀʀ sᴀɴᴀ 😘😘😘".format(str(dan.displayName),str(tgb.name)))
+        	ririn.sendMessage(op.param1, "ɴᴀʜ ᴋᴀɴ ʙᴀᴘᴇʀ 「{}」, sᴜᴇ {} 😂😂😂\nsᴇʟᴀᴍᴀᴛ ᴊᴀʟᴀɴ ᴅᴀɴ sᴇᴍᴏɢᴀʜ ᴛᴇɴᴀɴɢ ᴅɪʟᴜᴀʀ sᴀɴᴀ 😘😘😘".format(str(dan.displayName),str(tgb.name)))
         	ririn.sendContact(op.param1, op.param2)
         	ririn.sendImageWithURL(op.param1, "http://dl.profile.line-cdn.net{}".format(dan.picturePath))
         	
@@ -1764,7 +1764,7 @@ def ririnBot(op):
                                     	ririn.sendChatChecked(msg._from,msg.id)
                                     	contact = ririn.getContact(msg._from)
                                     	ririn.sendImageWithURL(msg._from, "http://dl.profile.line-cdn.net{}".format(contact.picturePath))
-                                    	sendMention(sender, "ᴏɪ ᴍʙʟᴏ @!      ,\nɴɢᴀᴘᴀɪɴ ᴛᴀɢ ᴛᴀɢ ɢᴡ", [sender])
+                                    	sendMention(sender, "ᴋᴀɴɢᴇɴ ʏᴀ ᴛᴀɢ ᴀɪᴍ @!      ,\nɴᴛᴀʀ ᴀᴋᴜ ᴄʏᴘᴏᴋ,, ᴋᴀᴘᴏᴋ ʟᴏᴇ", [sender])
                                     	dee = "" + random.choice(balas)
                                     break
             except Exception as error:
